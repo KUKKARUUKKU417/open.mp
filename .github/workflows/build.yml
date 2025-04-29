@@ -217,7 +217,7 @@ jobs:
         run: |
           echo "build_version=$(git describe --always --tags "refs/remotes/origin/${HEAD_REF}")" >> $GITHUB_OUTPUT
 
-      - uses: actions/download-artifact@v4
+      - name: actions/download-artifact@v4
         id: download
         with:
           name: open.mp-linux-x86-dynssl-${{ steps.vars.outputs.build_version }}
